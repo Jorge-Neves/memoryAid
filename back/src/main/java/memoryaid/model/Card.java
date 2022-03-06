@@ -1,7 +1,12 @@
 package memoryaid.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("card")
 public class Card {
 
+    @Id
     private final String id;
     private final String question;
     private final String answer;
