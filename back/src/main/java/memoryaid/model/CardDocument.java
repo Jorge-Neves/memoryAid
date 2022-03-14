@@ -3,8 +3,8 @@ package memoryaid.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("card")
-public class Card {
+@Document("cards")
+public class CardDocument {
 
     @Id
     private final String id;
@@ -13,7 +13,7 @@ public class Card {
     private final String[] topics;
     private final String[] options;
 
-    public Card(String id, String question, String answer, String[] topics, String[] options) {
+    public CardDocument(String id, String question, String answer, String[] topics, String[] options) {
         this.id = id;
         this.question = question;
         this.answer = answer;
